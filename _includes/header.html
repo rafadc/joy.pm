@@ -1,0 +1,23 @@
+<header class="site-header" role="banner">
+
+  <div class="container-fluid">
+    <div class="page-header">
+      <nav class="site-nav">
+        <div class="trigger">
+          {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+      <div class="title-container">
+        <div class="page-title">
+          <h1><a href="{{ "/" | relative_url}}"><span class="title-top-row">The Joy Of</span><br/><span class="title-bottom-row">programming</span></a></h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</header>
