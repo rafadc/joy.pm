@@ -41,13 +41,13 @@ echo "Hey!!!!" | msmtp recipient@mail.com
 
 That said let’s create the binding in elfeed config. If we check the source for elfeed show we can see that we can retrieve the URL of the current entry with:
 
-```
+{% highlight elisp %}
 (elfeed-entry-link elfeed-show-entry)
-```
+{% endhighlight %}
 
 Piece of cake. Let’s then let’s define an interactive function to send the email:
 
-```
+{% highlight elisp %}
 (defun elfeed-send-to-pocket ()
   "Send current article to pocket"
   (interactive)
@@ -55,17 +55,17 @@ Piece of cake. Let’s then let’s define an interactive function to send the e
     ((url (elfeed-entry-link elfeed-show-entry)))
     (shell-command (concat  "echo '\\n\\n" url "' | msmtp add@getpocket.com"))
     (message "Saved to pocket!")))
-```
+{% endhighlight %}
 
 I always add the final message to remember what is happening and avoid having an impossible to understand message like “Shell command successful” in the editor.
 
 Now in my use-package for elfeed I only need to add the following in the config section
 
-```
+{% highlight  %}
 :config
   (bind-keys :map elfeed-show-mode-map
                   ("x" . elfeed-send-to-pocket))
-```
+{% endhighlight %}
 
 This way when in an article I can just press x and the article will be saved to pocket.
 
