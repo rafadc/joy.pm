@@ -5,7 +5,7 @@ title: "Compiling Emacs"
 
 Let’s go bleeding edge!
 
-![](/assets/posts/2016-05-07-compiling-emacs/01.png)
+{% include image.html name="01.png" %}
 
 Just:
 

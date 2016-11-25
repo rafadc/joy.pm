@@ -103,7 +103,7 @@ When I look into a commit message, often, I am desperately looking for the reaso
 
 Have some empathy with a person investigating something wrong with your work, most probably, your future self.
 
-![](/assets/posts/2016-04-05-the_black_art_of_commit_messages/01.png)
+{% include image.html name="01.png" %}
 
 With the diff I can already see what changes were made. The text just explains what the hell I was trying to do and more importantly why. This gives the investigator a great deal of information to know if I was wrong in case something needs to be fixed.
 

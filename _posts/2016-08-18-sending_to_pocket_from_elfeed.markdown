@@ -4,7 +4,7 @@ title: "Sending to pocket from elfeed"
 ---
 I often use elfeed to go quickly through my RSS subscriptions. There are some of them that I want to take more time to read.
 
-![](/assets/posts/2016-08-18-sending_to_pocket_from_elfeed/01.png)
+{% include image.html name="01.png" %}
 
 Yes, it is mostly text but it is super useful.
 
@@ -14,7 +14,7 @@ Elfeed by default has nothing like a pocket integration but as you’ll probably
 
 One of the less known pocket features is the possibility to send links via email. We will make good use of it. Remember that you need to send the email from the same email address you have in pocket.
 
-![](/assets/posts/2016-08-18-sending_to_pocket_from_elfeed/02.png)
+{% include image.html name="02.png" %}
 
 In order to send emails I am using Msmtp. My configuration for gmail is something like:
 

@@ -5,7 +5,7 @@ title: "When to rewrite"
 
 We all heard it. Probably some of us lived it. That beautiful moment when somebody asks: “why don’t we rewrite our full application?”
 
-![](/assets/posts/2016-06-12-when_to_rewrite/01.png)
+{% include image.html name="01.png" %}
 
 ## Things to consider before starting
 

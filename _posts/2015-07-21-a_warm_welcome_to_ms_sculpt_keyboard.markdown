@@ -6,11 +6,11 @@ I just moved to a new Microsoft Sculpt keyboard. I am more than happy with it. I
 
 This is the first Microsoft product that I buy that feels really beautiful. It is really nice to have it in your table.
 
-![](/Users/rafael/code/joy.pm/assets/posts/2015-07-21-a_warm_welcome_to_ms_sculpt_keyboard/01.jpeg)
+{% include image.html name="01.jpeg" %}
 
 The position of the hands is really comfortable although a bit odd because it makes your wrists to stay horizontal. It feels strange in the beginning but the position is super relaxed.
 
-![](/Users/rafael/code/joy.pm/assets/posts/2015-07-21-a_warm_welcome_to_ms_sculpt_keyboard/02.jpeg)
+{% include image.html name="02.jpeg" %}
 
 There is a small detail I also love and it is that the spacebar is broken into two. Probably this is a really small detail but if I press it with a thumb the other thumb is not affected.
 
@@ -30,6 +30,6 @@ In the sculpt keyboard these two keys are reversed in relation to where they are
 
 This is really awesome. I’m really enjoying this. Now I no longer have to move my hands to the arrow keys for moving the cursor. I find this also saner than Vim’s hjkl. I did this because in my opinion the cursor keys in the sculpt are really uncomfortable to reach and now I did this change also in my laptop’s integrated keyboard.
 
-![](/Users/rafael/code/joy.pm/assets/posts/2015-07-21-a_warm_welcome_to_ms_sculpt_keyboard/02.jpeg)
+{% include image.html name="03.jpeg" %}
 
 In conclusion, I’m super happy with my acquisition. This is a really nice addon to my setup. I’m looking forward to get really used to it and next year I will aim for a Model 01.

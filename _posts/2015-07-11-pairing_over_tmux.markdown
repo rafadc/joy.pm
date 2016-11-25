@@ -18,7 +18,7 @@ tmux attach-session -t pair_programming
 
 Then you are sharing the session in the same computer. Easy, isn't it?
 
-![Both terminal sharing a common tmux session](/assets/2015-07-11-pairing_over_tmux/01.gif)
+{% include image.html name="01.gif" caption="Both terminal sharing a common tmux session" %}
 
 Even this may be impressive it’s not very useful.
 
@@ -155,7 +155,7 @@ ngrok tcp 22
 
 And we will have a tunnel open that will be available to your pair through the URL that appears in the screen. For example in the following scenario
 
-![ngrok details](/assets/2015-07-11-pairing_over_tmux/02.png)
+{% include image.html name="02.png" %}
 
 Our pair will have to connect using the following command
 
