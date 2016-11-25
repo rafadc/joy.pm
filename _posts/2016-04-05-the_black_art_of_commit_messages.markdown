@@ -2,8 +2,6 @@
 layout: post
 title: "The black art of commit messages"
 ---
-# The black art of commit messages
-
 Good commit messages are the unicorn of the person maintaining legacy code. I will try to review some commit messages I’ve found over the years with its pros and cons.
 
 I’ll break this into two categories: solving bugs and adding features.

@@ -2,8 +2,6 @@
 layout: post
 title: "A warm welcome to MS Sculpt keyboard"
 ---
-# A warm welcome to MS Sculpt keyboard
-
 I just moved to a new Microsoft Sculpt keyboard. I am more than happy with it. I wanted to move to a split keyboard for a long time but I never had the guts to try. Indeed I wanted to move to a Model 01 but this makes a good intermediate step.
 
 This is the first Microsoft product that I buy that feels really beautiful. It is really nice to have it in your table.
