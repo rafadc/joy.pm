@@ -61,7 +61,7 @@ I always add the final message to remember what is happening and avoid having an
 
 Now in my use-package for elfeed I only need to add the following in the config section
 
-{% highlight  %}
+{% highlight elisp %}
 :config
   (bind-keys :map elfeed-show-mode-map
                   ("x" . elfeed-send-to-pocket))
