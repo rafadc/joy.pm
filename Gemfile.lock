@@ -17,6 +17,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-crosspost-to-medium (0.1.14)
     jekyll-feed (0.8.0)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
@@ -46,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.3.1)
+  jekyll-crosspost-to-medium
   jekyll-feed (~> 0.8)
   minima (~> 2.0)
 
