@@ -33,4 +33,4 @@ exclude:
   - Gemfile.lock
   - assets_originals
 jekyll-crosspost_to_medium:
-  enabled: true
+  enabled: false
