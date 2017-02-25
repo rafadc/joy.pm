@@ -1,7 +1,8 @@
-languageCode = "en-us"
-title = "The joy of programming"
-baseurl = "http://joy.pm/"
-theme = "base16"
+languageCode  = "en-us"
+title         = "The joy of programming"
+baseurl       = "https://joy.pm/"
+theme         = "base16"
+publishdir    = "public"
 
 [author]
     name = "Rafa de Castro"
