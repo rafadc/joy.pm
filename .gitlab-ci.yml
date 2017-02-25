@@ -3,7 +3,7 @@ image: alpine:3.4
 before_script:
   - apk update && apk add openssl
   - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
-  - tar xf hugo_0.18.1_linux-64bit.tgz && cp ./hugo /usr/bin
+  - tar xfz hugo_0.18.1_Linux-64bit.tar.gz && cp ./hugo /usr/bin
   - hugo version
 
 pages:
