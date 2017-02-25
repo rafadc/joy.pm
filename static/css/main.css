@@ -1,0 +1,20 @@
+.homepage h1.site-title {
+    font-size: 5em;
+    padding: 0px;
+}
+
+.homepage h1.site-title img {
+    height: 1em;
+    vertical-align: middle;
+}
+
+.homepage h1.site-title .subtitle {
+    text-align: center;
+    margin: auto;
+    font-size: 0.7em;
+    padding-top: 30px;
+}
+
+a {
+    color: #6699cc;
+}
