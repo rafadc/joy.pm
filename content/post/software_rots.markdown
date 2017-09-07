@@ -5,7 +5,7 @@ draft = true
 
 I had this discussion many times. Some people argument often that software are ones and zero and software doesn't rot because of that. If you don't change a software it doesn't change. It's only bits.
 
-Ok. I'm fine with that. Maybe my problem is with the definition of what means for a software to rot. If I have to formulate what I mean for software to rot I'd say:
+Ok. I'm fine with that. Maybe my problem is with the definition of what means for a software to rot. If I had to give a definition to what I mean for software to rot I'd say:
 
 _The value a given piece of software provides changes over time. Almost always, this change is for its value to decrease._
 
@@ -21,8 +21,10 @@ For example in Platform161 we use Redis. A lot. There was this funny little vuln
 
 # People change
 
-There is this old notion of perceived value. Once your software is in production
+There is this old notion of perceived value. Once your software is in production it starts losing the shiny brand new thing label slowly. The more time it passes users will start seeing its features as the new statu quo and it will feel less and less valuable to them.
 
-# World around you changes
+Also, you are not the one writing software. There are more people providing brand new software that does something similar to what you software does. In a world with only one spreadsheet software this is extremely valuable but as time passes and when you have 50 different pieces of software doing that you need to do more things to provide the same value. It may be doing it faster, doing it cheaper or better but staying with the same 0's and 1's that never change will not make your software be equally valuable over time.
 
-All you integrations can fail. APIs get deprecated and services disappear.
+# Is this always so hard?
+
+To be honest I think it sounds harder than it really is. It just means that we need to strive to improve, slowly but steadily. It is true that a piece of code will always be a piece of code but software is just a means to an end.
