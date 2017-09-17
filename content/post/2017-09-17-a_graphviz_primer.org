@@ -1,7 +1,6 @@
 #+TITLE: A graphviz primer
 #+AUTHOR: Rafa de Castro
 #+DATE: 2017-09-17
-#+DRAFT: true
 
 One of the tools I've always wanted in my tool belt was a graphing tool for text files. Since I handle a lot of text that goes into repositories it is always a bit of a pain to somehow to version control diagrams. Today we will dive a bit into the world of Graphviz. A tool that turns scripts written into the dot language into images. Those scripts describe directed graphs. We can anyway emulate non directed graphs if we need it.
 
