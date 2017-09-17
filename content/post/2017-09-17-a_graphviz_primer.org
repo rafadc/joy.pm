@@ -1,4 +1,4 @@
-#+TITLE: A graphviz primer
+#+TITLE: A Graphviz primer
 #+AUTHOR: Rafa de Castro
 #+DATE: 2017-09-17
 
@@ -165,3 +165,5 @@ I created [[https://github.com/rafadc/following_graph][a sample script to create
 * Conclusions
 
 This has proven extremely useful for me to quickly sketch out ideas. It is great to have Graphviz to care for all the positioning of nodes and just let you think on the actual connections about ideas.
+
+This also opens the door for a lot of new integrations on emacs to generate images. I will work a bot more on that.
