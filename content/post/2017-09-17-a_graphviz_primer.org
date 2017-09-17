@@ -1,0 +1,168 @@
+#+TITLE: A graphviz primer
+#+AUTHOR: Rafa de Castro
+#+DATE: 2017-09-17
+#+DRAFT: true
+
+One of the tools I've always wanted in my tool belt was a graphing tool for text files. Since I handle a lot of text that goes into repositories it is always a bit of a pain to somehow to version control diagrams. Today we will dive a bit into the world of Graphviz. A tool that turns scripts written into the dot language into images. Those scripts describe directed graphs. We can anyway emulate non directed graphs if we need it.
+
+This has been extremely useful for me in combination with Emacs but we will do one step at a time and we will start with the command line to move to more complex integrations.
+
+* Your first graph
+
+No more thinking. Just fire your text editor and add create a file
+
+#+BEGIN_SRC dot :file ../../static/posts/a_graphviz_primer/first_graph.png :cmdline -Kdot -Tpng
+digraph G {
+  my_start -> one_branch;
+  my_start -> another_branch;
+}
+#+END_SRC
+
+Then turn it into a graph with the command line
+
+#+BEGIN_SRC shell
+dot -Tpng the_file_i_just_created.dot -o graph1.png
+#+END_SRC
+
+That will take the dot file you just created and turn it into this simple, but effective graph.
+
+[[file:/posts/2017-09-17-a_graphviz_primer/first_graph.png]]
+
+And we have a starting point. Maybe this doesn't look too impressive but we can see some things about the syntax of the dot language. We can also tweak the command line a bit to change the output format to pdf, jpg or post script.
+
+We are defining a series of nodes and the connections between them. On the example above we created a simple chain but we can make it as complex as we want.
+
+#+BEGIN_SRC dot :file ../../static/posts/2017-09-17-a_graphviz_primer/mode_complex_node_list.png :cmdline -Kdot -Tpng
+digraph G {
+  step1 -> step2 -> step3 -> step4;
+  step2 -> maybe_error;
+}
+#+END_SRC
+
+[[file:/posts/2017-09-17-a_graphviz_primer/mode_complex_node_list.png]]
+
+
+So as you can see in the first part graphviz is smart enough to arrange the nodes appropriately once you specify the nodes and its relations. It will try to organize the nodes top down in the more reasonable fashion.
+
+* Styling your graph
+
+As a quick graph sketching tool this is turning to be awesome (if you use emacs you can go to the end of the post to see how you can get extremely quick feedback) but if we want to put the graph somewhere we need to improve a bit the styling.
+
+To improve how our graphic looks we can dive into the attributes of elements. For example we can specify the shape of a node by using the shape attribute.
+
+#+BEGIN_SRC dot :file ../../static/posts/2017-09-17-a_graphviz_primer/styling.png :cmdline -Kdot -Tpng
+digraph G {
+  node_1 [shape=box];
+  node_2 [shape=circle];
+  node_3 [shape=plaintext];
+  node_4 [shape=polygon, sides=6];
+  node_1 -> node_3;
+}
+#+END_SRC
+
+#+RESULTS:
+
+[[file:/posts/2017-09-17-a_graphviz_primer/styling.png]]
+
+
+As you can see we can specify attributes of a node putting them in square brackets after specifying the node. But this is not limited to nodes but relations as well.
+
+#+BEGIN_SRC dot :file ../../static/posts/2017-09-17-a_graphviz_primer/styling_relations.png :cmdline -Kdot -Tpng
+digraph G {
+  node_1;
+  node_2;
+  node_1 -> node_2 [style=dotted];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:/posts/2017-09-17-a_graphviz_primer/styling_relations.png]]
+
+
+And obviously we can play with color:
+
+#+BEGIN_SRC dot :file ../../static/posts/2017-09-17-a_graphviz_primer/color.png :cmdline -Kdot -Tpng
+digraph G {
+  node_1 [color=blue];
+  node_1 -> node_2 [color=red];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:/posts/2017-09-17-a_graphviz_primer/color.png]]
+
+And if you check the docs you can achieve even more complex styles
+
+#+BEGIN_SRC dot :file ../../static/posts/2017-09-17-a_graphviz_primer/styled_node.png :cmdline -Kdot -Tpng
+digraph G {
+  default_node -> styled_node;
+  styled_node [style=filled,color=".7 .3 1.0"]
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:/posts/2017-09-17-a_graphviz_primer/styled_node.png]]
+
+
+But I will just cover the basics in this post. ;)
+
+* Org-mode
+
+I started using Graphviz just for this reason and I think this is really where it excels. After reading the lesson before probably you have enough knowledge to automate something similar for your favourite text editor.
+
+[[file:/posts/2017-09-17-a_graphviz_primer/emacs-digraph.gif]]
+
+** Using Graphviz to draw images
+
+For all you emacs users out there you can use org-mode to render your diagrams. If you add them to a source block and *C-c C-c* you will see the following
+
+#+BEGIN_SRC
+ #+BEGIN_SRC dot :file my_output_file.png :cmdline -Kdot -Tpng
+ digraph G {
+   my_start -> one_branch;
+   my_start -> another_branch;
+ }
+ #+END_SRC
+#+END_SRC
+
+** Automatically displaying images
+
+In my case the images were not being displayed until I did an *org-display-inline-images*. We can add a hook for that to be automatically added for us
+
+{{< highlight elisp >}}
+(defun my/fix-inline-images ()
+  (when org-inline-image-overlays
+    (org-redisplay-inline-images)))
+
+(add-hook 'org-babel-after-execute-hook 'my/fix-inline-images)
+{{< /highlight >}}
+
+** Yasnippet
+
+I also found extremely useful to define a snippet to create a new graph.
+
+{{< highlight shell >}}
+# -*- mode: snippet -*-
+# name: dot
+# key: dot_
+# --
+#+BEGIN_SRC dot :file ${1:file} :cmdline -Kdot -Tpng
+digraph ${2:name} {
+  $0
+}
+#+END_SRC
+{{< /highlight >}}
+
+So I can quickly play with graphics in Emacs.
+
+* Scripting
+
+Another funny thing you can do is programatically generate these graphs.
+
+I created [[https://github.com/rafadc/following_graph][a sample script to create a graph of your followers on Twitter]] that may not be very useful but it can illustrate what we can achieve generating this graphs programatically.
+
+[[file:/posts/2017-09-17-a_graphviz_primer/graph.png]]
+
+* Conclusions
+
+This has proven extremely useful for me to quickly sketch out ideas. It is great to have Graphviz to care for all the positioning of nodes and just let you think on the actual connections about ideas.

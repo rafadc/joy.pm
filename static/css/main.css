@@ -8,6 +8,10 @@
     vertical-align: middle;
 }
 
+img {
+    max-width: 100%;
+}
+
 .homepage h1.site-title .subtitle {
     text-align: center;
     margin: auto;
