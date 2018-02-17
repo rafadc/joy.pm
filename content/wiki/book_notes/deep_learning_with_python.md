@@ -1,11 +1,10 @@
 +++
 layout = "single"
+title = "Deep learning with Python"
+url = "/wiki/book_notes/deep_learning_with_python"
 +++
 
-
-# Deep learning with Python
-
-## Chapter 1: What is deep learning
+# Chapter 1: What is deep learning
 
 Skimmed.
 
@@ -30,7 +29,7 @@ The **optimizer** backpropagates the changes so we can adjust the weights correc
 
 Initially these weights are random but we update them every iteration of the training.
 
-## Chapter 2 Before we begin: the mathematical building blocks of neural networks
+# Chapter 2 Before we begin: the mathematical building blocks of neural networks
 
 In machine learning a category in a classification problem is called a **class**. The data points are called **samples**. The class associated with a data point is a **label**
 
@@ -65,18 +64,18 @@ At its core a tensor is just a container for data. Normally numeric. We can say 
 
 Then a scalar is a 0 dimension tensor and a vector is a 1D tensor. Do not confuse a vector with 5D with a 1D tensor. A 5D tensor will have 5 axes and a random number of dimensions on each axis.
 
-### Classification networks
+## Classification networks
 
 The last layer of the network if we are classifying should have as many neurons as the number of categories to classify.
 
 
-### How to choose loss functions
+## How to choose loss functions
 
 categorical_crossentropy : When you want to return classification of a category.
 softmax : When you want to predict a value.
 
 
-## Other notes
+# Other notes
 
 
 https://stats.stackexchange.com/questions/181/how-to-choose-the-number-of-hidden-layers-and-nodes-in-a-feedforward-neural-netw
