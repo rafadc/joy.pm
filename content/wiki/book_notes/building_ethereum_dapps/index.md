@@ -2,6 +2,7 @@
 title = "Building Ethereum DApps"
 +++
 
+
 ## First examples
 
 It is funny because I am using this chapter to learn that Ethereum has now checksummed addesses which have both uppercase and lowercase addesses
@@ -13,3 +14,5 @@ For exmaple:
 That is not a checksummed address and I cannot hardcode it. In the book the addresses are all without checksum yet so we cannot use them.
 
 It is fun because I didn't find any online checksummer. I am building my own  ¯\_(ツ)_/¯
+
+The result is in: <https://ethereum-checksum.cyg.us/>
