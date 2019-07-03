@@ -1,9 +1,9 @@
 languageCode  = "en-us"
 title         = "The joy of programming"
 baseurl       = "https://joy.pm/"
-theme         = "base16"
+theme         = "joy.pm"
 publishdir    = "public"
 
 [author]
     name = "Rafa de Castro"
-    copyright = "(c) 2018 Rafa de Castro"
+    copyright = "(c) 2019 Rafa de Castro"

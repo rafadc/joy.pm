@@ -10,7 +10,7 @@ hugo serve
 
 ## Deploy
 
-Just push to gitlab and CI will do the rest
+Just push to source repository
 
 ``` shell
 git push origin master
