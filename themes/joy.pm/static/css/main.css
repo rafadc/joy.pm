@@ -25,5 +25,15 @@ img {
 }
 
 #logo {
+    margin: 10px;
     width: 25%;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    flex-grow: 1;
+    width: 100%;
 }

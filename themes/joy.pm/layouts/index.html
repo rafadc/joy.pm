@@ -1,11 +1,19 @@
 {{ partial "header.html" . }}
 
-<img id="logo" src="/img/minilogo.png"/>
-<br>
-<h1>The joy of programming</h1>
 
-{{ range first 10 .Data.Pages }}
-<h1>## <a href={{ .Permalink }}>{{ .Title }}</a></h1>
-{{ end }}
+<div class="container">
+  <div class="left">
+    <h1># Blog</h1>
+    {{ range first 10 .Data.Pages }}
+    <h1>## <a href={{ .Permalink }}>{{ .Title }}</a></h1>
+    {{ end }}
+  </div>
+  <div class="right">
+    <img id="logo" src="/img/minilogo.png"/>
+    <br>
+    <h1>The joy of programming</h1>
+  </div>
+</div>
+
 
 {{ partial "footer.html" . }}
