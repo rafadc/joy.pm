@@ -4,6 +4,46 @@ body {
     font-family: 'Overpass Mono', monospace;
     padding: 20px 60px;
     line-height: 1.7em;
+    margin-top: 25px;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-left: 70px;
+}
+
+header span {
+    margin-right: 20px;
+}
+
+footer {
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 70px;
+}
+
+footer span {
+    margin-right: 20px;
+}
+
+footer span .branch {
+    color: #008800;
+}
+
+footer .filetype {
+    float: right;
+    margin-right: 200px;
 }
 
 h1 {
