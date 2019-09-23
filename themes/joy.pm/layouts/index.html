@@ -4,7 +4,7 @@
 <div class="container">
   <div class="left">
     <h1># Blog</h1>
-    {{ range first 10 .Pages }}
+    {{ range (.Paginator 10).Pages }}
     <h1>## <a href={{ .Permalink }}>{{ .Title }}</a></h1>
     {{ end }}
   </div>
