@@ -5,7 +5,7 @@
   <div class="left">
     <h1># Blog</h1>
     {{ range (.Paginator 5).Pages }}
-    <h1>## <a href={{ .Permalink }}>{{ .Title }}</a></h1>
+    <h2>## <a href={{ .Permalink }}>{{ .Title }}</a></h2>
     {{ end }}
     <a href="/post/">View all posts...</a>
   </div>

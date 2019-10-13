@@ -1,7 +1,7 @@
 body {
     background-color: #222222;
     color: #ffb300;
-    font-family: 'Overpass Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     padding: 20px 60px;
     line-height: 1.7em;
     margin-top: 25px;
@@ -47,11 +47,16 @@ footer .filetype {
 }
 
 h1 {
+    color: #51afef;
+    font-size: 2em;
+}
+
+h2 {
     color: #98be65;
     font-size: 1.2em;
 }
 
-h2 {
+h3 {
     color: #ff6c6b;
     font-size: 1.1em;
 }
