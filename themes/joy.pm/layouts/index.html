@@ -4,9 +4,10 @@
 <div class="container">
   <div class="left">
     <h1># Blog</h1>
-    {{ range (.Paginator 10).Pages }}
+    {{ range (.Paginator 5).Pages }}
     <h1>## <a href={{ .Permalink }}>{{ .Title }}</a></h1>
     {{ end }}
+    <a href="/post/">View all posts...</a>
   </div>
   <div class="right">
     <img id="logo" src="/img/minilogo.png"/>
