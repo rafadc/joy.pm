@@ -1,7 +1,9 @@
 {{ partial "header.html" . }}
 
 {{ range .Site.Pages }}
-  <h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
+<h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
 {{ end }}
+
+{{ partial "pagination.html" . }}
 
 {{ partial "footer.html" . }}
