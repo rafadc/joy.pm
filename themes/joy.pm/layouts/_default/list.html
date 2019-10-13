@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ range .Site.Pages }}
+{{ range .Pages }}
 <h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
 {{ end }}
 
