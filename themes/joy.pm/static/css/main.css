@@ -22,8 +22,9 @@ header {
     padding-left: 70px;
 }
 
-header span {
+header span a {
     margin-right: 20px;
+    color: #ffb300;
 }
 
 footer {
