@@ -7,6 +7,10 @@ body {
     margin-top: 25px;
 }
 
+strong {
+    color: #FED36D;
+}
+
 header {
     background-color: #000000;
     position: fixed;
@@ -62,7 +66,7 @@ h3 {
 }
 
 a {
-    color: #ffb300;
+    color: #9AB8FA;
 }
 
 img {
@@ -81,4 +85,17 @@ img {
 .left {
     flex-grow: 1;
     width: 100%;
+}
+
+.highlight {
+    padding: 30px 200px;
+}
+
+pre {
+    padding: 10px;
+}
+
+code {
+    line-height: 1em;
+    font-size: 1.25em;
 }

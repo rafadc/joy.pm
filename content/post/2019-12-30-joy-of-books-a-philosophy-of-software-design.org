@@ -1,0 +1,81 @@
+#+TITLE: The joy of books: A philosophy of software design
+#+AUTHOR: Rafa de Castro
+#+DATE: 2019-12-30
+
+
+* Introduction
+
+I've just finished "A Philosophy of Software Design" by John Ousterhout just two days ago. It is a book on software design. I've been reading a lot about the topic of complexity lately and this came as a recommendation from [[https://twitter.com/leehambley][Lee Hambley]]. Good stuff to come.
+
+* Some things I loved
+
+- *We need to talk about design*: We need to talk about the interfaces we show in our code. We need to open the discussion to that kind of stuff that for some reason we give for granted. We are not formally trained in design but we do it all day whatever we want it or not.
+- *His naming is really good*: He describes some concepts that are intuitive but provides a really good metaphor. The shallow vs deep classes metaphor is extremely useful and I will use it from now on.
+- *Care about interfaces*: He spends a lot of time carefully designing the interfaces between pieces of software.
+
+* The things I didn't like
+
+Part of the statements he is doing are extremely dangerous IMHO. It is always good to challenge assumptions but to my experience some things are plain wrong.
+
+- *Comments and documentation are not the same thing*: I think he is mislead by the fact that all the languages he mentioned implement them the same way. He is making no distinction between one and the other and that is an unforgivable sin. Early documentation makes sense. Early comments are wishful thinking and mines in the land field. [[https://hexdocs.pm/elixir/writing-documentation.html#documentation-code-comments][Elixir is an example of this]]. Since both are plain text we use the comment syntax to avoid syntax parsing. Anyway both are conceptually different stuff that just by chance have the same implementation. During the book I found both concepts confused one with each other.
+
+- *Tests don't only encourage only features*: In this point I strongly disagree and I think he has a ton of misconceptions here. First thing is that he only considers unit and integration tests. Second is that I dont know how he looks for proof that his api is usable. Third is that IMHO test are most valuable when refactoring or when they are hard to write.
+
+- *He falls a lot in strawman arguments*: This is something that I find extremely common in technical books lately. Some people white sentences like: "in general people do X". That is often a smell. You should critizise practices done right. It doesn't make sense to challenge something done wrong because it is obviously... wrong.
+
+- *A big block of code with comments is rarely more readable than smaller methods*: I like that he tried to challenge this but TBH the discussion leads nowhere and the example he put is IMHO a counterexample of the point he is making. At the moment we've accepted in the industry [[https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two][The rule of seven plus minus two]] what he is trying to achieve doesn't make sense. For example:
+
+#+BEGIN_SRC ruby
+def bussiness_process
+  mutate_elements
+  publish_results
+  notify_client
+end
+
+private
+
+def mutate_elements
+  my_collection.each do |element|
+    element.mutate_somehow
+  end
+end
+
+def publish_results
+  Sevice.publish(my_collection)
+end
+
+def notify_client
+  Notificator.send(client)
+end
+#+END_SRC
+
+will always be simpler to understand than
+
+#+BEGIN_SRC ruby
+def bussiness_process
+  # Mutation of the processes
+  my_collection.each do |element|
+    element.mutate_somehow
+  end
+
+  # We need to send the data to the final storage
+  Sevice.publish(my_collection)
+
+  # The notification is needed to fullfill ISO-god only knows what
+  Notificator.send(client)
+end
+#+END_SRC
+
+It will be harder to understand by definition because we have several abstraction levels in the same context. I wrote an intentionally short method in both scenarios to try to be as beneficial with his point as possible. I don't believe humans can understand two intertwined things in the same environment. The advantage of the small methods scenario is that we have the tool of scoping.
+
+If you check the first example the explanation of business concepts is up to the documentation (see my comment before). The method acts as an index you navigate if and inly if (and this is extremely important) you want to dig into the details. And in the second you have only one potential way to see things. Everything. Even if I am reading source code I want to be able to layer things to the level I need. The second option is by definition less structured.
+
+The small methods version is harder to write because it forces you to decompose the code, understand every detail and take the reader by the hand to explain what the heck was going on when you wrote that. The one method scenario is just easier for the developer.
+
+There may be a case where the second is better but couldn't think of a single one that is not a extremely weird case that shouldn't be considered at all a general principle.
+
+- *He believes in love at first sight*: Do two designs and you will know which is better when you see it. He is constantly taking decisions to be right. In my experience we are wrong half of the times so we design for change. We follow our hunches and we do the best we can.
+
+* In sum
+
+When I went through my notes before writing this post I wanted to be sure I was not bashing this book at all. I think it is worth every second spent reading and all arguments I may agree or not are well explained and carefully exposed. It is also a very much needed discussion. I may disagree in some things but that doesn't mean is a bad book at all. Indeed after reading it I want to dig deeper in several topics related to software design.
