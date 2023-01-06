@@ -17,3 +17,5 @@ Just push to source repository
 ``` shell
 git push origin master
 ```
+
+Deployed in Netlify
