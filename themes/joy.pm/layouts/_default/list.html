@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ range .Pages }}
+{{ range .Pages.ByPublishDate }}
 <h2><a href={{ .Permalink }}>{{ .Title }}</a></h2>
 {{ end }}
 
