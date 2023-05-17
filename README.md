@@ -6,7 +6,7 @@ My tiny blog. Based on Hugo.
 
 ## Development
 
-```
+``` shell
 hugo serve
 ```
 
