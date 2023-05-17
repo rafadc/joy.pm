@@ -1,5 +1,5 @@
 +++
-title = "Oh my oh my AI"
+title = "Oh my, oh my, AI"
 date = "2023-05-17"
 +++
 
