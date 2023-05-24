@@ -1,6 +1,5 @@
 +++
 title = "Internal developer platforms"
-draft = true
 date = "2020-05-27"
 +++
 
@@ -13,3 +12,5 @@ Thank god some companies are starting to notice that not every single person in 
 ![xkcd comic about something being worth automating](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)
 
 When I see that comic strip I always think that in developer time that may even be more because every automation you have scales proportionally with the amount of people that benefit from the automation.
+
+
