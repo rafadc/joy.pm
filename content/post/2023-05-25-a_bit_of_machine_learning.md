@@ -16,6 +16,7 @@ Anyway the focus was on the machine learning side of things. Some learnings:
 - Data cleaning is a PITA and takes a shitload of time. I spend a lot of time categorizing images. I tried to do a script to download a couple thousand from Duck duck go but at the end of the day I had to do a lot of validation manually.
 - Iterating can get you to decent error rates. My first versions hace 30% error rate and I stopped at about 6 and taking into account that I am just a beginner probably this can be done far far better.
 - Having a tough metric to fight like the error rate is super motivating. You run your training and evaluate your model against the testing set. It is super motivating to see how far you can go. It is far more rewarding than the green red cycle of TDD.
+- I have a vast amount of things to learn. I am changing from resnet to levit because the error is lower. Why? YOLO!!! XD
 
 It was easier than what I expected though. I am super happy to see than in an afternoon I can hack something relatevely useful. Let's continue the journey!
 
