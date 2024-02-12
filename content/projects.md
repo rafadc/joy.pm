@@ -41,5 +41,5 @@ This was a crazy experiment to track the books I am reading. It was awesome to b
 
 You can find the notes for this in [this blog post](https://joy.pm/post/2022-01-10-weird_software_joy_pm_library).
 
-Actually I don't use this anymore because I use [bookwhyrm](https://bookwyrm.social/user/rafadc) and Obsidian far more.
+Actually I don't use this anymore because I use [bookwyrm](https://bookwyrm.social/user/rafadc) and Obsidian far more.
 
