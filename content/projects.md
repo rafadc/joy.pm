@@ -22,6 +22,9 @@ Then the backups and monitoring are roaming free at my home. I am monitoring eve
 
 I needed a small pomodoro timer and I did not like anyone that was already there so I built my own
 
+
+# No longer active Experiments
+
 ## Software crafters Madrid
 *12/2012 - 03/2023*
 
@@ -30,3 +33,13 @@ During 10 years I helped with the organization of a meetup in Madrid about softw
 ![meetup stats during my stay](/img/meetup.png)
 
 This was a very interesting experience. I learnt a ton and hopefully gave something back to all peers.
+
+## The library of joy.pm
+*02/2022 - 11/2023*
+
+This was a crazy experiment to track the books I am reading. It was awesome to build a small rust tool I could use often.
+
+You can find the notes for this in [this blog post](https://joy.pm/post/2022-01-10-weird_software_joy_pm_library).
+
+Actually I don't use this anymore because I use [bookwhyrm](https://bookwyrm.social/user/rafadc) and Obsidian far more.
+
