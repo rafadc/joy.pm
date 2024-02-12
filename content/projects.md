@@ -15,6 +15,13 @@ I don't have the production code in k8s since I made a dead cheap version to kee
 
 Then the backups and monitoring are roaming free at my home. I am monitoring everything using Grafana and Prometheus and I am relatively happy with that part.
 
+## Micropomo
+*02/2024 - Active*
+
+[Github](https://github.com/rafadc/micropomo)
+
+I needed a small pomodoro timer and I did not like anyone that was already there so I built my own
+
 ## Software crafters Madrid
 *12/2012 - 03/2023*
 
