@@ -1,6 +1,6 @@
 +++
-title: "Software engineers, not programming language engineers"
-date: 2024-02-12
+title = "Software engineers, not programming language engineers"
+date = "2024-02-12"
 +++
 
 This is probably the 1000 post on the subject but from time to time it is fine to repeat the message.
