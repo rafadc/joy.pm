@@ -1,6 +1,6 @@
 ---
 date: '2024-02-15'
-draft: true
+draft: false
 title: 'A New Perspective on picking Books'
 ---
 
