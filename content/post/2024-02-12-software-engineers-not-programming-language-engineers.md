@@ -13,7 +13,7 @@ This has a couple of implications that I'd love to enumerate
 
 I prefer not to be called a "Ruby engineer" for example. If I do that, I am losing the opportunity to learn from different contexts. We tend to stand in our echo chamber of our environment. We lose the ability to see different approaches to the same kind of problems in order to better understand the tradeoffs.
 
-This is why I tend to use multiple stacks in (multiple)[https://github.com/rafadc/micropomo) (pets)[https://github.com/rafadc/library.joy.pm) that are not the same stacks I use in my day to day job.
+This is why I tend to use multiple stacks in [multiple](https://github.com/rafadc/micropomo) [pets](https://github.com/rafadc/library.joy.pm) that are not the same stacks I use in my day to day job.
 
 ## You can go wide but also deep in some things
 
